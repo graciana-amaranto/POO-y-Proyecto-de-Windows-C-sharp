@@ -8,6 +8,15 @@ namespace LibTransportes.Entidades
 {
     public class Remolque
     {
-        public Remolque() { }
+        public Remolque(int id, string capacidadMinima) { 
+        
+            Id = id;
+            CapacidadMinima= capacidadMinima;
+
+        
+        }
+
+        public int Id { get; set; }
+        public string CapacidadMinima { get; set; }
     }
 }

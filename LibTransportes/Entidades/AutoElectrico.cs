@@ -30,7 +30,7 @@ namespace LibTransportes.Entidades
         }
         public override string Imprimir()
         {
-            return "Marca: " + Marca + " Velocidad maxima: " + VelocidadMaxima;
+            return "Origen: " + this.Origen + "Marca: " + this.Marca + " Velocidad maxima: " + this.VelocidadMaxima;
         }
     }
 }

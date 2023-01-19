@@ -9,6 +9,8 @@ namespace LibTransportes.Entidades
 
     public class Camion : Vehiculo //herencia: camion hereda de vehiculo
     {
+        public Remolque Remolque { get; set; }
+
         public Camion(string origen, int cargamaxima, string tipocarga) : base(origen) //constructor
         {
             CargaMaxima= cargamaxima;
@@ -26,15 +28,14 @@ namespace LibTransportes.Entidades
             return "Frena muy lento";
         }
 
-        //public string QuitarRemolque()
-        //{
-        //    Remolque
-        //    return "Remolque quidado";
+        public void QuitarRemolque()
+        {
+            this.Remolque = null;
+        }
 
-        
         public override string Imprimir()
         {
-            return "Carga maxima: " + CargaMaxima + " Tipo de carga: " + TipoCarga;
+            return "Origen" + this.Origen + "Carga maxima: " + this.CargaMaxima + " Tipo de carga: " + this.TipoCarga;
         }
     }
 }
